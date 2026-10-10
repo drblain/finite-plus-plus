@@ -1,0 +1,7 @@
+add_library(fsm SHARED ${CMAKE_CURRENT_SOURCE_DIR}/src/state.cpp)
+
+target_include_directories(fsm PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+install(TARGETS fsm DESTINATION ${CMAKE_INSTALL_LIBDIR})
+
+install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
